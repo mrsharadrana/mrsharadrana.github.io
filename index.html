@@ -2,106 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sharad Rana | Backend Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
-      color: #f5f5f5;
-    }
-    header {
-      padding: 2rem;
-      text-align: center;
-      background-color: #1e1e1e;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
-      color: #bbbbbb;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .project {
-      background-color: #1f1f1f;
-      border-left: 4px solid #00acc1;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 5px;
-    }
-    .project h3 {
-      margin: 0 0 0.5rem;
-      color: #03dac6;
-    }
-    .project p {
-      margin: 0.2rem 0;
-      color: #cccccc;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #1e1e1e;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    a {
-      color: #90caf9;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    body { margin:0; padding:0; display:flex; font-family:sans-serif; color:#E2E2E2; background:#121212; }
+    aside { width:260px; background:#1e1e1e; padding:2rem; display:flex; flex-direction:column; align-items:center; }
+    aside img { width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:1rem; }
+    aside h2 { margin:0.5rem 0; color:#03dac6; }
+    aside .social a { margin:0 0.3rem; color:#90caf9; font-size:1.2rem; }
+    main { flex:1; padding:2rem; max-width:900px; }
+    header h1 { margin-top:0; font-size:2rem; color:#fff; }
+    section { margin-bottom:2rem; }
+    .projects { display:grid; grid-template-columns:1fr; gap:1.5rem; }
+    .project { background:#1f1f1f; padding:1rem; border-radius:5px; border-left:4px solid #00acc1; }
+    .project h3 { margin:0; color:#03dac6; }
+    .project p { margin:0.5rem 0; }
+    a { color:#90caf9; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    footer { text-align:center; padding:1rem 0; font-size:0.9rem; color:#777; }
+    @media(max-width:768px){ body{flex-direction:column;} aside{width:100%;flex-direction:row;justify-content:center;} main{padding:1rem;} }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Sharad Rana</h1>
-    <p>Backend Developer | Java | Spring Boot | Kafka | AWS</p>
-  </header>
-  
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I'm a backend developer with over 8 years of experience building secure and scalable systems in the fintech and payments domain. I specialize in Java, Spring Boot, Kafka, and AWS to build efficient microservices and APIs.
-    </p>
-
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Task Management API</h3>
-      <p>A RESTful API built with Spring Boot, JWT authentication, and PostgreSQL. Features include user roles, Swagger documentation, and unit tests.</p>
-      <p><a href="https://github.com/yourusername/task-api" target="_blank">GitHub Repo</a></p>
+  <aside>
+    <img src="https://via.placeholder.com/120" alt="Sharad Rana"/>
+    <h2>Sharad Rana</h2>
+    <p>Backend Developer<br>Java • Spring Boot • Kafka • AWS</p>
+    <div class="social">
+      <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
+  </aside>
 
-    <div class="project">
-      <h3>Kafka Event Streaming Service</h3>
-      <p>Real-time microservice for handling order events using Kafka producers and consumers. Designed for asynchronous processing with MongoDB.</p>
-      <p><a href="https://github.com/yourusername/kafka-order-service" target="_blank">GitHub Repo</a></p>
-    </div>
+  <main>
+    <header><h1>About Me</h1></header>
+    <section>
+      <p>I'm a backend engineer with 8+ years building secure, scalable microservices & APIs using Java, Spring Boot, Kafka, and AWS. I help fintech platforms and enterprises ship robust systems.</p>
+    </section>
 
-    <div class="project">
-      <h3>AWS Lambda Microservice</h3>
-      <p>Serverless REST API deployed on AWS Lambda with DynamoDB and API Gateway. Ideal for low-cost, scalable services.</p>
-      <p><a href="https://github.com/yourusername/lambda-api" target="_blank">GitHub Repo</a></p>
-    </div>
+    <section>
+      <h1>Projects</h1>
+      <div class="projects">
+        <div class="project">
+          <h3>Task Management API</h3>
+          <p>Spring Boot REST API, JWT-auth, PostgreSQL, Swagger, unit/integration tests.</p>
+          <a href="https://github.com/yourusername/task-api" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+          <h3>Kafka Event Pipeline</h3>
+          <p>Order streaming microservice built with Kafka producers/consumers and MongoDB backend.</p>
+          <a href="https://github.com/yourusername/kafka-order-service" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+          <h3>AWS Lambda API</h3>
+          <p>Serverless REST API deployed via Lambda + API Gateway, using DynamoDB and CI/CD pipeline.</p>
+          <a href="https://github.com/yourusername/lambda-api" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">https://linkedin.com/in/yourprofile</a></p>
-  </section>
+    <section>
+      <h1>Contact</h1>
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </section>
 
-  <footer>
-    &copy; 2025 Sharad Rana | Built with 💻 and GitHub Pages
-  </footer>
+    <footer>&copy; 2025 Sharad Rana</footer>
+  </main>
 </body>
 </html>
